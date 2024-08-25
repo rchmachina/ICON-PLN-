@@ -34,22 +34,19 @@ func nomor1(sentence string) string {
 
 
 // fungsi nomorn 2
-func nomor2(n int) []int {
-	if n <= 0 {
-		return []int{}
-	}
-
-	fibonacciSeries := make([]int, n)
-	fibonacciSeries[0] = 0
-
-	if n > 1 {
-		fibonacciSeries[1] = 1
-		for i := 2; i < n; i++ {
-			fibonacciSeries[i] = fibonacciSeries[i-1] + fibonacciSeries[i-2]
+func nomor2() {
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Print(i, " : FizzBuzz,")
+		} else if i%3 == 0 {
+			fmt.Print(i, ": Fizz,")
+		} else if i%5 == 0 {
+			fmt.Println(i, ": Buzz,")
+		} else {
+			continue
 		}
 	}
-
-	return fibonacciSeries
+	
 }
 
 // fungsi nomor 3
@@ -113,7 +110,7 @@ func main() {
 
 	//nomor 2
 	fmt.Println("\n \n nomor 2")
-	nomor2(10)
+	nomor2()
 	//nomor 3
 	fmt.Println("\n \n nomor 3")
 	n := 10
